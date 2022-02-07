@@ -10,7 +10,7 @@ export PATH=${PATH}:/usr/local/bin
 export GOPATH=~/go
 
 # Git Prompt
-  function gitPrompt {
+function gitPrompt {
   command -v __git_ps1 > /dev/null && __git_ps1 "(%s)"
 }
 
