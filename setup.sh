@@ -41,4 +41,7 @@ symbolizeLink .bashrc
 symbolizeLink .tmux.conf
 symbolizeLink .vimrc
 
-
+mkdir -p $dotfiles/.vim/plugged
+cd $dotfiles/.vim/plugged
+git clone git://github.com/junegunn/vim-plug/master/plug.vim
+vim +PlugInstall +qa
