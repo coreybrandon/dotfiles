@@ -35,7 +35,6 @@ function symbolizeLink{
     ln -s ${dotfiles}/${1} ${destination}
 }
 
-
 symbolizeLink .bash_profile
 symbolizeLink .bashrc
 symbolizeLink .tmux.conf
