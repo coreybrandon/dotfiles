@@ -9,7 +9,7 @@ export TERM=xterm-256color
 export PATH=${PATH}:/usr/local/bin
 export GOPATH=~/go
 
-# gitPrompt
+# Git Prompt
   function gitPrompt {
   command -v __git_ps1 > /dev/null && __git_ps1 "(%s)"
 }
@@ -29,7 +29,7 @@ gitC="${white}"
 pointerC="${green}"
 textC="${white}"
 
-# root
+# Root Zone
 if [ "${UID}" -eq "0" ]; then
   name="${red}"
 fi
