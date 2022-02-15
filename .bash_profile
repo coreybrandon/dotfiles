@@ -1,4 +1,3 @@
-export PATH=~/.local/bin:$PATH
 
 if [ -r ~/.bashrc ]; then
    source ~/.bashrc
@@ -10,3 +9,4 @@ fi
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export EDITOR='vim'
 export CLICOLOR=1
+

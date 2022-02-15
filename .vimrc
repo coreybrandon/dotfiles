@@ -1,4 +1,5 @@
 " Vim-Plug
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'fatih/vim-go'

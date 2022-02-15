@@ -1,3 +1,9 @@
+shopt -s histappend
+
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
 alias ls='ls --color'
 alias ls='ls -G'
 alias grep='grep --color=auto'
@@ -6,8 +12,9 @@ export EDITOR='vim'
 export TERM=xterm-256color
   
 # User Configuration
-export PATH=${PATH}:/usr/local/bin
 export GOPATH=~/go
+export PATH=/usr/local/go/bin:$PATH
+export GOBIN=$GOPATH/bin
 
 # Git Prompt
 function gitPrompt {
