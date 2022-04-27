@@ -4,12 +4,29 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-alias ls='ls --color'
-alias ls='ls -G'
-alias grep='grep --color=auto'
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+# eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
+# zlib
+export LDFLAGS="-L/usr/local/opt/bzip2/lib"
+export CPPFLAGS="-I/usr/local/opt/bzip2/include"
+export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib"
+export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include"
+export LDFLAGS="${LDFLAGS} -L/usr/local/opt/sqlite/lib"
+export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/sqlite/include"
+export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig"
+export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/sqlite/lib/pkgconfig"
+
+# export LDFLAGS="-L/usr/local/opt/zlib/lib"
+# export CPPFLAGS="-I/usr/local/opt/zlib/include"
+
+alias ls='ls --color'
+alias grep='grep --color=auto'
 export EDITOR='vim'
-export TERM=xterm-256color
   
 # User Configuration
 export GOPATH=~/go
